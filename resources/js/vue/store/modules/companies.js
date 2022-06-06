@@ -1,17 +1,13 @@
+import {useAjax} from "../../composables/use-ajax";
+
 export default {
     namespaced: true,
 
     // state
     state: {
         companies: null
-        // companies: [
-        //     {
-        //         name: 'apple'
-        //     },
-        //     {
-        //         name: 'google'
-        //     }
-        // ]
+
+        // end state
     },
 
     // getters
@@ -19,11 +15,41 @@ export default {
         getCompanies(state) {
             return state.companies
         }
+
+        // end getters
     },
 
     // mutations
-    mutations: {},
+    mutations: {
+        setCompanies(state, payload) {
+            state.companies = payload
+        }
+
+        // end mutations
+    },
 
     // actions
-    actions: {},
+    actions: {
+        // load companies
+        async loadCompanies(context) {
+            // import ajax
+            const {isPending, loadData} = useAjax()
+
+            // try
+            try {
+                const data = await loadData(
+                    `http://127.0.0.1:8000/api`,
+                    {},
+                    {pending: true, additionalCallTime: 2000}
+                )
+
+                context.commit('setCompanies', data)
+
+            } catch (err) {
+                throw err;
+            }
+
+        }
+        // end action
+    },
 };

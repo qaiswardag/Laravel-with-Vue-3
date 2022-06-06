@@ -7,7 +7,7 @@
 <link
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap"
     rel="stylesheet">
-<script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
 
 <body style="font-family: 'Raleway', sans-serif;">
