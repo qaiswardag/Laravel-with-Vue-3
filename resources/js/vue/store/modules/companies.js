@@ -43,6 +43,7 @@ export default {
                     {pending: true, additionalCallTime: 2000}
                 )
 
+                // context
                 context.commit('setCompanies', data)
 
             } catch (err) {

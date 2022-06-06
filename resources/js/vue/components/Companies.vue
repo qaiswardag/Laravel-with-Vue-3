@@ -4,8 +4,9 @@
     </div>
     <div v-if="companies === null || companies.length" class="grid sm:grid-cols-2 gap-12 mt-16">
         <div v-for="company in companies" :key="company"
-             class="bg-red-400 flex items-center justify-center text-center text-white py-12">
-            <p>{{ company.name }}</p>
+             class="bg-red-400 text-white py-12">
+            <p class="flex items-center justify-center">Company: {{ company.name }}</p>
+            <p class="flex items-center justify-center">Category: {{ company.category.name }}</p>
         </div>
     </div>
     <div v-if="!companies && !error">
