@@ -40,7 +40,7 @@ export default {
                 const data = await loadData(
                     `http://127.0.0.1:8000/api`,
                     {},
-                    {pending: true, additionalCallTime: 2000}
+                    {pending: true, additionalCallTime: 500}
                 )
 
                 // context

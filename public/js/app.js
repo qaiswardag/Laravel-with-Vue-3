@@ -20371,7 +20371,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 _context.next = 4;
                 return loadData("http://127.0.0.1:8000/api", {}, {
                   pending: true,
-                  additionalCallTime: 2000
+                  additionalCallTime: 500
                 });
 
               case 4:
